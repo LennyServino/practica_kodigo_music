@@ -1,0 +1,52 @@
+:root {
+    --primary-color: #242429;
+    --text-color: #fff;
+    --nav-title: #a2a2a2;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 1rem;
+    margin: 1.2rem 3rem;
+}
+
+.card {
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 5rem;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 1rem .8rem 1rem;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5));
+    z-index: 1; 
+}
+
+.card h3, p {
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.card h3 {
+    color: var(--text-color);
+}
+
+.card p {
+    color: var(--nav-title);
+}

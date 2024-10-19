@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #242429;
+    --text-color: #fff;
+    --nav-title: #a2a2a2;
+}
+
+.side_bar {
+    height: 100%;
+    width: 15rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+    padding-top: 1.2rem;
+}
+
+.side_bar a {
+    padding: 1rem 0 1rem .5rem;
+    margin-left: 1.2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    display: block;
+    width: 83%;
+}
+
+.side_bar a:hover {
+    background-color: #717171;
+    border-radius: .8rem;
+}
+
+.side_bar h2 {
+    color: var(--nav-title);
+    padding-left: 1.7rem;
+    padding-top: 1.2rem;
+    font-size: 1.1rem;
+}

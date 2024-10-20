@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #242429;
+    --text-color: #fff;
+    --nav-title: #a2a2a2;
+}
+
+.content_container {
+    color: var(--text-color);
+    margin: 1.2rem 3rem;
+}
+
+.mixes_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    gap: 2rem;
+}
+
+.card_mix {
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 17rem;
+    position: relative;
+}
+
+.card_header {
+    width: 100%;
+    position: relative;
+
+    &:hover {
+        &::before {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.9));
+        }
+    }
+}
+.card_header img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card_header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7));
+    border-radius: 10px;
+    z-index: 1; /* Asegura que el pseudo-elemento esté debajo del contenido */
+}
+
+.card_header p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0.5rem;
+    color: var(--text-color);
+    border-radius: 0 0 10px 10px;
+    margin: .5rem;
+}
+
+.card_body {
+    padding: .3rem;
+}
+
+.card_body h3, p {
+    margin: .2rem;
+}
+
+.card_body p {
+    color: var(--nav-title)
+}

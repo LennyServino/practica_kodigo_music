@@ -4,7 +4,7 @@ import Card_Playlist from './CardPlaylist'
 import CustomMixes from './CustomMixes'
 
 export default function Home() {
-	return (
+	return (	
 		<div className={style.container}>
 			<Card_Playlist />
 			<CustomMixes />

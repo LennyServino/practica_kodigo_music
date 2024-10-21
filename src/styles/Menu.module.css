@@ -15,6 +15,7 @@
     overflow-x: hidden;
     padding-top: 1.2rem;
     transition: transform 0.3s ease-in-out;
+
 }
 
 .side_bar a {
@@ -43,6 +44,60 @@
     top: 15px;
     left: 15px;
     z-index: 4;
+}
+
+.user_box {
+    position: relative;
+    display: flex;
+    justify-content: column;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 0;
+    color: var(--text-color);
+    text-align: center;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+
+.user_box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.user_box ul {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 5;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    width: 100%;
+    text-align: left;
+    border: 1px solid var(--text-color);
+    box-sizing: border-box;
+}
+
+.user_box ul li {
+    padding: .5rem;
+    z-index: 5;
+}
+
+.user_box ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+}
+
+/* Mostrar la lista cuando isDropdownOpen es true */
+.user_box ul.show {
+    display: block;
+    flex-direction: column;
 }
 
 .side_bar h2 {

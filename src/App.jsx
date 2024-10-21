@@ -17,7 +17,7 @@ function App() {
     <>
       {
         /* validar que si existe el usuario muestre el menu, de lo contrario muestra el login */
-        user ? <Menu /> : <Login setUser={setUser}/>
+        user ? <Menu user={user} /> : <Login setUser={setUser}/>
       }
     </>
   )

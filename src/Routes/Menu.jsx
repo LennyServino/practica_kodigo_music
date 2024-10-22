@@ -35,7 +35,7 @@ export default function Menu({ user }) {
             <h3>{user.name}</h3>
             {/* boton para desplegar la lista de opciones */}
             <button onClick={toggleDropdown}>
-              <IoIosArrowDown />
+              <IoIosArrowDown className={style.arrow_btn}/>
             </button>
             
           </div>

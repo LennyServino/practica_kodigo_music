@@ -6,7 +6,7 @@
 
 .side_bar {
     height: 100%;
-    width: 15rem;
+    width: 15.2rem;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -15,7 +15,6 @@
     overflow-x: hidden;
     padding-top: 1.2rem;
     transition: transform 0.3s ease-in-out;
-
 }
 
 .side_bar a {
@@ -31,6 +30,27 @@
 .side_bar a:hover {
     background-color: #717171;
     border-radius: .8rem;
+    border: 0;
+}
+
+/* Estilo para la barra de desplazamiento del sidebar */
+.side_bar {
+    overflow-y: auto; 
+}
+
+.side_bar::-webkit-scrollbar {
+    width: 0; /* Ancho de la barra de desplazamiento */
+}
+
+.side_bar::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados del pulgar */
+    border: 3px solid var(--secondary-color); /* Borde alrededor del pulgar */
+}
+
+.side_bar::-webkit-scrollbar-track {
+    background-color: var(--primary-color); /* Color de la pista de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la pista */
 }
 
 .hamburger {
@@ -67,37 +87,41 @@
     color: var(--text-color);
 }
 
-.user_box ul {
+.user_options {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.user_options ul {
     display: none;
     position: absolute;
     background-color: var(--primary-color);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 5;
     list-style: none;
     padding: 0;
     margin: 0;
     top: 100%;
     width: 100%;
     text-align: left;
-    border: 1px solid var(--text-color);
     box-sizing: border-box;
 }
 
-.user_box ul li {
+.user_options ul li {
     padding: .5rem;
     z-index: 5;
 }
 
-.user_box ul li a {
+.user_options ul li a {
     text-decoration: none;
     color: var(--text-color);
     display: block;
+    border-bottom: 1px solid var(--nav-title);
 }
 
 /* Mostrar la lista cuando isDropdownOpen es true */
-.user_box ul.show {
+.user_options ul.show {
+    position: relative;
     display: block;
-    flex-direction: column;
+    max-height: 500px;
 }
 
 .side_bar h2 {
@@ -106,6 +130,7 @@
     padding-top: 1.2rem;
     font-size: 1.1rem;
 }
+
 
 @media (max-width: 768px) {
     .side_bar {

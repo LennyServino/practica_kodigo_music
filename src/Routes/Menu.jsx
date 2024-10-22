@@ -37,7 +37,10 @@ export default function Menu({ user }) {
             <button onClick={toggleDropdown}>
               <IoIosArrowDown />
             </button>
-            {isDropdownOpen && (
+            
+          </div>
+          {isDropdownOpen && (
+            <div className={style.user_options}>
               <ul className={isDropdownOpen ? style.show : ''}>
                 <li>
                   <a href="">Perfil</a>
@@ -49,8 +52,8 @@ export default function Menu({ user }) {
                   <a href="" onClick={handleLogout}>Cerrar Sesión</a>
                 </li>
               </ul>
+            </div>
             )}
-          </div>
           <Link to="/">Inicio</Link>
           <a href="">Explorar</a>
           <a href="">Videos</a>

@@ -38,7 +38,7 @@ export default function CustomMixes() {
 
     const renderMixes = () => {
         return mixNames.map((mix, index) => {
-            console.log(mix);
+            //console.log(mix);
             
             return (
                 <div key={index} className={styles.card_mix}>

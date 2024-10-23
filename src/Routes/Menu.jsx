@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Routes, useNavigate } from 'react-router-dom'
 import style from '../styles/Menu.module.css'
 import Home from '../components/Home'
 import CustomMixes from '../components/CustomMixes';
@@ -9,11 +9,14 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { IoIosArrowDown } from "react-icons/io";
 import { LuDisc2 } from "react-icons/lu";
 import { FiMusic } from "react-icons/fi";
+import Swal from 'sweetalert2';
 
 
-export default function Menu({ user }) {
+export default function Menu({ user, setUser }) {
   const [isOpen, setIsOpen] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+
+  const navigate = useNavigate()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -24,12 +27,30 @@ export default function Menu({ user }) {
   }
 
   const handleLogout = () => {
-    localStorage.removeItem('user_kodigo_music')
-    window.location.reload()
+    try {
+      localStorage.removeItem('user_kodigo_music')
+      setUser(null)
+      navigate('/')
+    } catch (error) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+        }
+    });
+    Toast.fire({
+        icon: "error",
+        title: "Usuario o contraseña incorrectos"
+    });
+    }
   }
 
   return (
-    <BrowserRouter>
       <div>
         <button className={style.hamburger} onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}
@@ -68,15 +89,6 @@ export default function Menu({ user }) {
           <Link className={style.link_with_icon}><LuDisc2 />Albumes</Link>
           <Link className={style.link_with_icon}><FiMusic />Canciones</Link>
         </nav>
-
       </div>
-
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/home' element={<Home />}></Route>
-        <Route path='/inicio' element={<Home />}></Route>
-        <Route path='/mixes' element={<CustomMixes />}></Route>
-      </Routes>
-    </BrowserRouter>
   )
 }

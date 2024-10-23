@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from '../styles/Login.module.css'
 import { GiMusicSpell } from "react-icons/gi";
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 //importando los usuarios de la carpeta data
 import usersData from '../data/users.json';
@@ -18,10 +20,16 @@ export default function Login({setUser}) {
         resolver: yupResolver(schema)
     })
 
+    const navigate = useNavigate();
+
+    //validar si el usuario ya inicio sesion no muestre el login
+    useEffect(() => {
+        if(localStorage.getItem('user_kodigo_music')) {
+            navigate('/home');
+        }
+    }, [])
 
     const loginUser = (data) => {
-        console.log(data);
-
         //validamos que el usuario exista
         const user = usersData.find(user => user.email === data.email && user.password === data.password)
 
@@ -30,8 +38,23 @@ export default function Login({setUser}) {
             localStorage.setItem('user_kodigo_music', JSON.stringify(user))
             console.log("Usuario encontrado");
             setUser(user);
+            navigate('/home');
         } else {
-            console.log("Usuario no encontrado");
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+            Toast.fire({
+                icon: "error",
+                title: "Usuario o contraseña incorrectos"
+            });
         }
     }
 

@@ -88,6 +88,22 @@
     }
 
     .mixes_container {
-        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        margin: 1.2rem 1rem;
+    }
+    
+    .card_mix {
+        max-width: 100%;
+    }
+
+    .content_container h1 {
+        margin: 1.3rem;
+        font-size: 1.8em;
+    }
+
+    .card_header p {
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: .1rem;
     }
 }

@@ -4,11 +4,15 @@
     --nav-title: #a2a2a2;
 }
 
+.content_container {
+    margin-left: 15rem;
+}
+
 .cardContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-    gap: 1rem;
     margin: 1.2rem 3rem;
+    gap: 2rem;
 }
 
 .card {

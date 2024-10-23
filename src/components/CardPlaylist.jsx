@@ -25,8 +25,10 @@ export default function Card_Playlist() {
     };
 
     return (
-        <div className={styles.cardContainer}>
-            {renderCards()}
+        <div className={styles.content_container}>
+            <div className={styles.cardContainer}>
+                {renderCards()}
+            </div>
         </div>
     );
 }

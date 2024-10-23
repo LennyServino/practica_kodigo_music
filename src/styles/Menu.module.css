@@ -68,6 +68,22 @@
     z-index: 4;
 }
 
+.link_with_icon {
+    display: flex;
+    align-items: center;
+
+}
+
+.link_with_icon svg {
+    margin-right: .5rem;
+    font-size: 1.4rem;
+    vertical-align: text-bottom;
+}
+
+.link_with_icon a {
+    line-height: 1.5;
+}
+
 .user_box {
     position: relative;
     display: flex;

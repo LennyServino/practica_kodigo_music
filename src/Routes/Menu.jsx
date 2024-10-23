@@ -2,9 +2,13 @@ import React, { useState } from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import style from '../styles/Menu.module.css'
 import Home from '../components/Home'
+import CustomMixes from '../components/CustomMixes';
+//Importar iconos
 import { HiMiniSignal } from "react-icons/hi2";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IoIosArrowDown } from "react-icons/io";
+import { LuDisc2 } from "react-icons/lu";
+import { FiMusic } from "react-icons/fi";
 
 
 export default function Menu({ user }) {
@@ -54,25 +58,24 @@ export default function Menu({ user }) {
               </ul>
             </div>
             )}
-          <Link to="/">Inicio</Link>
+          <Link to="/home">Inicio</Link>
           <a href="">Explorar</a>
           <a href="">Videos</a>
 
           {/* Seccion mi musica */}
           <h2>Mi Musica</h2>
-          <a href=""><HiMiniSignal />Mixes & Radio</a>
-          <a href="">Playlists</a>
-          <a href="">Albumes</a>
-          <a href="">Canciones</a>
-          <a href="">Videos</a>
-          <a href="">Artistas</a>
+          <Link to="/mixes" className={style.link_with_icon}><HiMiniSignal />Mixes & Radio</Link>
+          <Link className={style.link_with_icon}><LuDisc2 />Albumes</Link>
+          <Link className={style.link_with_icon}><FiMusic />Canciones</Link>
         </nav>
 
       </div>
 
       <Routes>
         <Route path='/' element={<Home />}></Route>
+        <Route path='/home' element={<Home />}></Route>
         <Route path='/inicio' element={<Home />}></Route>
+        <Route path='/mixes' element={<CustomMixes />}></Route>
       </Routes>
     </BrowserRouter>
   )

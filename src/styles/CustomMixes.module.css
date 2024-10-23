@@ -81,3 +81,13 @@
 .card_body p {
     color: var(--nav-title)
 }
+
+@media screen and (max-width: 768px) {
+    .content_container {
+        margin-left: 0;
+    }
+
+    .mixes_container {
+        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    }
+}

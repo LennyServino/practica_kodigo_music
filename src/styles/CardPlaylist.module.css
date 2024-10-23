@@ -55,3 +55,9 @@
 .card p {
     color: var(--nav-title);
 }
+
+@media screen and (max-width: 768px) {
+    .content_container {
+        margin-left: 0;
+    }
+}

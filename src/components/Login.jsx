@@ -27,7 +27,7 @@ export default function Login({setUser}) {
         if(localStorage.getItem('user_kodigo_music')) {
             navigate('/home');
         }
-    }, [])
+    }, [navigate])
 
     const loginUser = (data) => {
         //validamos que el usuario exista

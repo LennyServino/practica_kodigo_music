@@ -36,7 +36,7 @@ export default function Login({setUser}) {
         if(user) {
             //guardamos el usuario en el localstorage
             localStorage.setItem('user_kodigo_music', JSON.stringify(user))
-            console.log("Usuario encontrado");
+            //console.log("Usuario encontrado");
             setUser(user);
             navigate('/home');
         } else {

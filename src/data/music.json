@@ -1,0 +1,162 @@
+[
+    {
+        "title": "Bohemian Rhapsody",
+        "artist": "Queen",
+        "album": "A Night at the Opera",
+        "genre": "Rock",
+        "duration": "5:55",
+        "cover_url": "https://example.com/queen_bohemian_rhapsody.jpg"
+    },
+    {
+        "title": "Billie Jean",
+        "artist": "Michael Jackson",
+        "album": "Thriller",
+        "genre": "Pop",
+        "duration": "4:54",
+        "cover_url": "https://example.com/michael_jackson_billie_jean.jpg"
+    },
+    {
+        "title": "Imagine",
+        "artist": "John Lennon",
+        "album": "Imagine",
+        "genre": "Soft Rock",
+        "duration": "3:07",
+        "cover_url": "https://example.com/john_lennon_imagine.jpg"
+    },
+    {
+        "title": "Smells Like Teen Spirit",
+        "artist": "Nirvana",
+        "album": "Nevermind",
+        "genre": "Grunge",
+        "duration": "5:01",
+        "cover_url": "https://example.com/nirvana_smells_like_teen_spirit.jpg"
+    },
+    {
+        "title": "Rolling in the Deep",
+        "artist": "Adele",
+        "album": "21",
+        "genre": "Soul",
+        "duration": "3:48",
+        "cover_url": "https://example.com/adele_rolling_in_the_deep.jpg"
+    },
+    {
+        "title": "Hotel California",
+        "artist": "Eagles",
+        "album": "Hotel California",
+        "genre": "Rock",
+        "duration": "6:31",
+        "cover_url": "https://example.com/eagles_hotel_california.jpg"
+    },
+    {
+        "title": "Shape of You",
+        "artist": "Ed Sheeran",
+        "album": "Divide",
+        "genre": "Pop",
+        "duration": "3:53",
+        "cover_url": "https://example.com/ed_sheeran_shape_of_you.jpg"
+    },
+    {
+        "title": "Like a Rolling Stone",
+        "artist": "Bob Dylan",
+        "album": "Highway 61 Revisited",
+        "genre": "Folk Rock",
+        "duration": "6:09",
+        "cover_url": "https://example.com/bob_dylan_like_a_rolling_stone.jpg"
+    },
+    {
+        "title": "Someone Like You",
+        "artist": "Adele",
+        "album": "21",
+        "genre": "Pop",
+        "duration": "4:45",
+        "cover_url": "https://example.com/adele_someone_like_you.jpg"
+    },
+    {
+        "title": "Stairway to Heaven",
+        "artist": "Led Zeppelin",
+        "album": "Led Zeppelin IV",
+        "genre": "Rock",
+        "duration": "8:02",
+        "cover_url": "https://example.com/led_zeppelin_stairway_to_heaven.jpg"
+    },
+    {
+        "title": "Hey Jude",
+        "artist": "The Beatles",
+        "album": "Hey Jude",
+        "genre": "Rock",
+        "duration": "7:11",
+        "cover_url": "https://example.com/beatles_hey_jude.jpg"
+    },
+    {
+        "title": "Uptown Funk",
+        "artist": "Mark Ronson feat. Bruno Mars",
+        "album": "Uptown Special",
+        "genre": "Funk",
+        "duration": "4:31",
+        "cover_url": "https://example.com/mark_ronson_uptown_funk.jpg"
+    },
+    {
+        "title": "Thinking Out Loud",
+        "artist": "Ed Sheeran",
+        "album": "X",
+        "genre": "Pop",
+        "duration": "4:41",
+        "cover_url": "https://example.com/ed_sheeran_thinking_out_loud.jpg"
+    },
+    {
+        "title": "Let It Be",
+        "artist": "The Beatles",
+        "album": "Let It Be",
+        "genre": "Rock",
+        "duration": "4:03",
+        "cover_url": "https://example.com/beatles_let_it_be.jpg"
+    },
+    {
+        "title": "Thriller",
+        "artist": "Michael Jackson",
+        "album": "Thriller",
+        "genre": "Pop",
+        "duration": "5:57",
+        "cover_url": "https://example.com/michael_jackson_thriller.jpg"
+    },
+    {
+        "title": "Born to Run",
+        "artist": "Bruce Springsteen",
+        "album": "Born to Run",
+        "genre": "Rock",
+        "duration": "4:31",
+        "cover_url": "https://example.com/bruce_springsteen_born_to_run.jpg"
+    },
+    {
+        "title": "Sweet Child O' Mine",
+        "artist": "Guns N' Roses",
+        "album": "Appetite for Destruction",
+        "genre": "Rock",
+        "duration": "5:55",
+        "cover_url": "https://example.com/guns_n_roses_sweet_child_o_mine.jpg"
+    },
+    {
+        "title": "Rolling in the Deep",
+        "artist": "Adele",
+        "album": "21",
+        "genre": "Pop",
+        "duration": "3:48",
+        "cover_url": "https://example.com/adele_rolling_in_the_deep.jpg"
+    },
+    {
+        "title": "Lose Yourself",
+        "artist": "Eminem",
+        "album": "8 Mile",
+        "genre": "Hip-Hop",
+        "duration": "5:26",
+        "cover_url": "https://example.com/eminem_lose_yourself.jpg"
+    },
+    {
+        "title": "Wonderwall",
+        "artist": "Oasis",
+        "album": "(What's the Story) Morning Glory?",
+        "genre": "Britpop",
+        "duration": "4:18",
+        "cover_url": "https://example.com/oasis_wonderwall.jpg"
+    }
+]

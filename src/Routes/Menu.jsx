@@ -68,10 +68,10 @@ export default function Menu({ user, setUser }) {
             <div className={style.user_options}>
               <ul className={isDropdownOpen ? style.show : ''}>
                 <li>
-                  <a href="">Perfil</a>
+                  <Link to="/work-in-progress">Perfil</Link>
                 </li>
                 <li>
-                  <a href="">Configuración</a>
+                  <Link to="/work-in-progress">Configuracion</Link>
                 </li>
                 <li>
                   <a href="" onClick={handleLogout}>Cerrar Sesión</a>
@@ -80,14 +80,14 @@ export default function Menu({ user, setUser }) {
             </div>
             )}
           <Link to="/home">Inicio</Link>
-          <a href="">Explorar</a>
-          <a href="">Videos</a>
+          <Link to="/work-in-progress">Explorar</Link>
+          <Link to="/work-in-progress">Videos</Link>
 
           {/* Seccion mi musica */}
           <h2>Mi Musica</h2>
           <Link to="/mixes" className={style.link_with_icon}><HiMiniSignal />Mixes & Radio</Link>
-          <Link className={style.link_with_icon}><LuDisc2 />Albumes</Link>
-          <Link className={style.link_with_icon}><FiMusic />Canciones</Link>
+          <Link className={style.link_with_icon} to='/albums'><LuDisc2 />Albumes</Link>
+          <Link className={style.link_with_icon} to='/canciones' ><FiMusic />Canciones</Link>
         </nav>
       </div>
   )

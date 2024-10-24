@@ -1,0 +1,31 @@
+/* WorkInProgress.module.css */
+.container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-left: 15rem;
+    margin-top: 15rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: #333;
+}
+
+.message {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.icon {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin-left: 0;
+    }
+}

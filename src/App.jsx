@@ -33,11 +33,31 @@ function App() {
               <Home />
             </PrivateRoute>
           } />
-          <Route path='/home' element={<Home />}></Route>
-          <Route path='/inicio' element={<Home />}></Route>
-          <Route path='/mixes' element={<CustomMixes />}></Route>
-          <Route path='/canciones' element={<PlayList name={'Canciones'} numberSongs={20} />}></Route>
-          <Route path='/albums' element={<CustomMixes />} />
+
+          <Route path='/inicio' element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          } />
+
+          <Route path='/mixes' element={
+            <PrivateRoute>
+              <CustomMixes />
+            </PrivateRoute>
+          } />
+
+          <Route path='/canciones' element={
+            <PrivateRoute>
+              <PlayList name={'Canciones'} numberSongs={20} />
+            </PrivateRoute>
+          } />
+
+          <Route path='/albums' element={
+            <PrivateRoute>
+              <CustomMixes />
+            </PrivateRoute>
+          } />
+
           <Route path='/login' element={<Login setUser={setUser}/>}></Route>
           <Route path='/work-in-progress' element={<WorkInProgress />} />
           <Route path='*' element={<Navigate to={user ? '/' : '/login'} />} />

@@ -79,7 +79,7 @@ export default function Menu({ user, setUser }) {
               </ul>
             </div>
             )}
-          <Link to="/home">Inicio</Link>
+          <Link to="/inicio">Inicio</Link>
           <Link to="/work-in-progress">Explorar</Link>
           <Link to="/work-in-progress">Videos</Link>
 
